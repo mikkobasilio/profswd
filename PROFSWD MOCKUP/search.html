@@ -1,0 +1,466 @@
+<html>
+<head>
+<style type="text/css">
+body{
+	background-color: rgb(255, 192, 82);
+
+	font-family: Arial, sans-serif;
+	font-size: 13px;
+	overflow:hidden;
+}
+
+
+#logo{
+	margin: 0 auto;
+	width: 100%;
+	left: 50%;
+	text-align:center;
+}
+
+#inputTextboxId{
+	background-color:transparent;
+	width: 460px;
+	height:57px;
+	float: left;
+	margin-top: 3px;
+	border: none;
+	outline: none;
+	padding-left: 20px;
+	font-size: 25px;
+
+}
+header{
+
+	font-family:andara,Calibri,Segoe,Segoe UI,Optima,Arial, sans-serif;
+	font-size: 15px;
+	color: rgb(64,64,64);
+	padding-right: 30px;
+	padding-top: 10px;
+	height: 20px;
+}
+
+header a{
+	text-decoration: none;
+	color: 000;
+}
+
+header a:hover{
+	text-decoration: underline;
+	color: 000;
+}
+#funcs{
+	height: 40px;
+	width: 100px;
+	background-color:red;
+	
+}
+#results{
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	position: relative;
+	background-color : rgb(255, 235, 198); 
+	width: 75%;
+	margin: 0 auto;
+	height: 600px;
+	 box-shadow: 6px 6px 0px #ab9165;
+}
+.srchcon {
+	width: 41px; 
+	height: 41px;
+	}
+
+.srchb {
+	background: url('search.png') no-repeat;
+	width: 41px;
+	height: 41px;
+	margin-top: 10px;
+	display: inline-block;
+	position:relative;
+	}
+	
+.srchb:hover{
+	background:url('srchov.png') no-repeat;
+}
+#recipe{
+	position:relative;
+	border-top: 3px solid rgb(255, 235, 198);
+	border-right: 6px solid rgb(255, 235, 198);
+	width: 32.78%;
+	height: 32%;
+	background-color: rgb(255, 192, 82);
+	overflow:hidden;
+}
+.search{
+	background-color : rgb(255, 235, 198); 
+	width:542px;
+	height:60px;
+	margin: 15 auto;
+	border: 3px solid rgba(0,0,0,0.15);
+	opacity: 0.8;
+	 box-shadow: 3px 3px 0px #ab9165;
+	
+}
+.search:hover{
+
+	border: 3px solid rgba(0,0,0,0.3);
+	opacity: 1;
+}
+
+.search:active{
+	
+	border: 3px solid rgb(66,133,244);
+}
+input[type="text"], textarea {
+
+  background-color : rgb(255, 235, 198); 
+	color: rgb(157, 137, 100);
+}
+
+#mic{
+
+	float:right;
+
+}
+
+#signin {
+	float:right;
+	padding-right: 50px;
+}
+
+#container{
+
+}
+
+#recipeContainer{
+	opacity:0.0;
+	position:absolute;
+	z-index: 2;
+	left:0px;
+	top:0px;
+	width:100%;
+	background-color:black;
+	color:white;
+	bottom:0;
+	padding-left:10px;
+	padding-top:10px;
+	font-size:16px;
+	height:100%;
+	
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+#recipeContainer:hover{
+	opacity:0.6;
+	position:absolute;
+	z-index: 2;
+	left:0px;
+	top:0px;
+	width:100%;
+	background-color:black;
+	color:white;
+	bottom:0;
+	padding-left:10px;
+	padding-top:10px;
+	font-size:16px;
+	height:100%;
+	
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+#recipeName{
+	color: yellow;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#recipeDetails{
+	color: white;
+	font-size: 15px;
+	font-family: "Trebuchet MS", sans-serif;
+}
+.justify-content { text-align : justify; position : relative; }
+
+.justify-content>* { display : inline-block; }
+
+.justify-content:after { content : ''; display : inline-block; width : 100%; height : 0; display : inline-block; }
+
+/*
+==============================================
+bigEntrance
+==============================================
+*/
+
+
+.bigEntrance{
+	animation-name: bigEntrance;
+	-webkit-animation-name: bigEntrance;	
+
+	animation-duration: 1.6s;	
+	-webkit-animation-duration: 1.6s;
+
+	animation-timing-function: ease-out;	
+	-webkit-animation-timing-function: ease-out;	
+
+	visibility: visible !important;			
+}
+
+@keyframes bigEntrance {
+	0% {
+		transform: scale(0.3) rotate(6deg) translateX(-30%) translateY(30%);
+		opacity: 0.2;
+	}
+	30% {
+		transform: scale(1.03) rotate(-2deg) translateX(2%) translateY(-2%);		
+		opacity: 1;
+	}
+	45% {
+		transform: scale(0.98) rotate(1deg) translateX(0%) translateY(0%);
+		opacity: 1;
+	}
+	60% {
+		transform: scale(1.01) rotate(-1deg) translateX(0%) translateY(0%);		
+		opacity: 1;
+	}	
+	75% {
+		transform: scale(0.99) rotate(1deg) translateX(0%) translateY(0%);
+		opacity: 1;
+	}
+	90% {
+		transform: scale(1.01) rotate(0deg) translateX(0%) translateY(0%);		
+		opacity: 1;
+	}	
+	100% {
+		transform: scale(1) rotate(0deg) translateX(0%) translateY(0%);
+		opacity: 1;
+	}		
+}
+
+@-webkit-keyframes bigEntrance {
+	0% {
+		-webkit-transform: scale(0.3) rotate(6deg) translateX(-30%) translateY(30%);
+		opacity: 0.2;
+	}
+	30% {
+		-webkit-transform: scale(1.03) rotate(-2deg) translateX(2%) translateY(-2%);		
+		opacity: 1;
+	}
+	45% {
+		-webkit-transform: scale(0.98) rotate(1deg) translateX(0%) translateY(0%);
+		opacity: 1;
+	}
+	60% {
+		-webkit-transform: scale(1.01) rotate(-1deg) translateX(0%) translateY(0%);		
+		opacity: 1;
+	}	
+	75% {
+		-webkit-transform: scale(0.99) rotate(1deg) translateX(0%) translateY(0%);
+		opacity: 1;
+	}
+	90% {
+		-webkit-transform: scale(1.01) rotate(0deg) translateX(0%) translateY(0%);		
+		opacity: 1;
+	}	
+	100% {
+		-webkit-transform: scale(1) rotate(0deg) translateX(0%) translateY(0%);
+		opacity: 1;
+	}				
+}
+#visi{
+	visibility: hidden;
+}
+
+/*
+==============================================
+slideUp
+==============================================
+*/
+
+
+.slideUp{
+	animation-name: slideUp;
+	-webkit-animation-name: slideUp;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+
+	visibility: visible !important;			
+}
+
+@keyframes slideUp {
+	0% {
+		transform: translateY(100%);
+	}
+	50%{
+		transform: translateY(-8%);
+	}
+	65%{
+		transform: translateY(4%);
+	}
+	80%{
+		transform: translateY(-4%);
+	}
+	95%{
+		transform: translateY(2%);
+	}			
+	100% {
+		transform: translateY(0%);
+	}	
+}
+
+@-webkit-keyframes slideUp {
+	0% {
+		-webkit-transform: translateY(100%);
+	}
+	50%{
+		-webkit-transform: translateY(0%);
+	}
+	65%{
+		
+	}
+	80%{
+		
+	}
+	95%{
+
+	}			
+	100% {
+
+	}	
+}
+
+/*
+==============================================
+slideLeft
+==============================================
+*/
+
+
+.slideLeft{
+	animation-name: slideLeft;
+	-webkit-animation-name: slideLeft;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;		
+
+	visibility: visible !important;	
+}
+
+@keyframes slideLeft {
+	0% {
+		transform: translateX(150%);
+	}
+	50%{
+		transform: translateX(-8%);
+	}
+	65%{
+		transform: translateX(4%);
+	}
+	80%{
+		transform: translateX(-4%);
+	}
+	95%{
+		transform: translateX(2%);
+	}			
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+@-webkit-keyframes slideLeft {
+	0% {
+		-webkit-transform: translateX(150%);
+	}
+	50%{
+		-webkit-transform: translateX(-8%);
+	}
+	65%{
+		-webkit-transform: translateX(4%);
+	}
+	80%{
+		-webkit-transform: translateX(-4%);
+	}
+	95%{
+		-webkit-transform: translateX(2%);
+	}			
+	100% {
+		-webkit-transform: translateX(0%);
+	}
+}
+
+</style>
+<script>
+function watermark(text){
+  var inputBox = document.getElementById("inputbox");
+    if (inputBox.value.length > 0){
+      if (inputBox.value == text)
+        inputBox.value = '';
+    }
+    else
+      inputBox.value = text;
+}
+
+function watermark(inputId,text){
+  var inputBox = document.getElementById(inputId);
+    if (inputBox.value.length > 0){
+      if (inputBox.value == text)
+        inputBox.value = '';
+    }
+    else
+      inputBox.value = text;
+}
+
+function rcpsrch(){
+	var q = document.getElementById("inputTextboxId").value;
+	console.log("sex" + q);
+	window.location.replace("http://www.google.com/search?q=" + document.getElementById("inputTextboxId").value);
+	return false;
+}
+
+</script>
+<title>Recipe MashApp - Pogi</title>
+<head>
+<body>
+
+<header>
+<div id=signin>
+<a href=#>Log In</a> |
+<a href=#>Register</a></div>
+</header>
+
+<div id="logo">
+<a href="home.html"><img src=logo2.png height=130px width=178px class="bigEntrance" id="visi"></a>
+<br>
+<div class="search">
+<form name="mappsrch" onsubmit="rcpsrch()">
+<input id="inputTextboxId" type="text" value="Whats in your fridge?" onfocus="watermark('inputTextboxId', 'Whats in your fridge?');" onblur="watermark('inputTextboxId','Whats in your fridge?')" />
+<a class="srchcon"><span class="srchb" type="submit" onclick="rcpsrch()"></span></a>
+</form>
+
+</div>
+</div>
+
+<div id="results" class="justify-content">
+<div id="recipe"><img src = "recipe1.jpg" style="float:left;height:100%; width:100%">
+<a href="maintenance.html"><div id="recipeContainer"><span id="container"><font id="recipeName">Grilled Pork Skewers</font><br><font id="recipeDetails"><br>submitted by: eow<br>prep time: 45min | total time: 1hr<br>User Rating: 4.5<br><br> Leftovers from this dish can also be used for: <br>Pork Chao Fan</font></span></div></a></div><div id="recipe"><img src = "recipe2.jpg" style="float:left;width:100%;height:100%;">
+<a href="maintenance.html"><div id="recipeContainer"><span id="container"><font id="recipeName">Oven Fried Buttermilk Chicken</font><br><font id="recipeDetails"><br>submitted by: benjoe123<br>prep time: 5min | total time: 1hr30min<br>User Rating: 0.0<br><br> Leftovers from this dish can also be used for: <br>Chicken Fried Rice</font></span></div></a></div><div id="recipe"><img src = "recipe3.jpg" style="float:left;width:100%;height:100%;">
+<a href="maintenance.html"><div id="recipeContainer"><span id="container"><font id="recipeName">Old El Paso Gourmet Cake</font><br><font id="recipeDetails"><br>submitted by: meioboi<br>prep time: 2min | total time: 30min<br>User Rating: 5.0<br><br> Leftovers from this dish can also be used for: <br>null</font></span></div></a></div><div id="recipe"><img src = "recipe4.jpg" style="float:left;width:100%;height:100%;">
+<a href="maintenance.html"><div id="recipeContainer"><span id="container"><font id="recipeName">Breaded Ranch Chicken Breasts</font><br><font id="recipeDetails"><br>submitted by: mikkopogi<br>prep time: 6min | total time: 55min<br>User Rating: 6.9<br><br> Leftovers from this dish can also be used for: <br>null</font></span></div></a></div>
+
+</div>
+</body>
+</html>

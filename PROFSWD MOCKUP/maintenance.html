@@ -1,0 +1,161 @@
+<html>
+<head>
+<style type="text/css">
+body{
+	background-color: rgb(255, 192, 82);
+	font-family: andara,Calibri,Segoe,Segoe UI,Optima,Arial, sans-serif;
+	font-size: 15px;
+
+}
+
+
+#logo{
+	margin: 0 auto;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	text-align:center;
+}
+
+#inputTextboxId{
+	background-color:transparent;
+	width: 460px;
+	height:57px;
+	float: left;
+	margin-top: 3px;
+	border: none;
+	outline: none;
+	padding-left: 20px;
+	font-size: 25px;
+}
+
+.srchcon {
+	width: 41px; 
+	height: 41px;
+	}
+
+.srchb {
+	background: url('search.png') no-repeat;
+	width: 41px;
+	height: 41px;
+	margin-top: 10px;
+	display: inline-block;
+	position:relative;
+	}
+	
+.srchb:hover{
+	background:url('srchov.png') no-repeat;
+}
+	
+header{
+	font-family:andara,Calibri,Segoe,Segoe UI,Optima,Arial, sans-serif;
+	font-size: 15px;
+	color: rgb(64,64,64);
+	padding-right: 30px;
+	padding-top: 10px;
+	height: 100px;
+}
+
+header a{
+	text-decoration: none;
+	color: 000;
+}
+
+header a:hover{
+	text-decoration: underline;
+	color: 000;
+}
+.search{
+	background-color : rgb(255, 235, 198); 
+	width:542px;
+	height:60px;
+	margin: 15 auto;
+	border: 1px solid rgba(0,0,0,0.15);
+	opacity: 0.8;
+	 box-shadow: 3px 3px 0px #ab9165;
+}
+
+.search:hover{
+
+	border: 1px solid rgba(0,0,0,0.3);
+	opacity: 1;
+}
+
+.search:active{
+	
+	border: 1px solid rgb(66,133,244);
+}
+input[type="text"], textarea {
+    background-color : rgb(255, 235, 198); 
+	color: rgb(157, 137, 100);
+}
+
+#mic{
+	margin-bottom: 30px;
+	float:right;
+
+}
+
+#signin {
+	float:right;
+	padding-right: 50px;
+}
+
+#mainte{
+	height:200px;
+	font-size:100px;
+	width:100%;
+	text-align:center;
+	color:white;
+	font-family:Segoe UI, sans-serif;
+}
+</style>
+<script>
+function watermark(text){
+  var inputBox = document.getElementById("inputbox");
+    if (inputBox.value.length > 0){
+      if (inputBox.value == text)
+        inputBox.value = '';
+    }
+    else
+      inputBox.value = text;
+}
+
+function watermark(inputId,text){
+  var inputBox = document.getElementById(inputId);
+    if (inputBox.value.length > 0){
+      if (inputBox.value == text)
+        inputBox.value = '';
+    }
+    else
+      inputBox.value = text;
+}
+
+function rcpsrch(){
+	var q = document.getElementById("inputTextboxId").value;
+	console.log("sex" + q);
+	window.location.replace("http://www.google.com/search?q=" + document.getElementById("inputTextboxId").value);
+	return false;
+}
+</script>
+<title>Recipe MashApp - Pogi</title>
+<head>
+<body>
+
+<header>
+<div id=signin>
+<a href=#>Log In</a> |
+<a href=#>Register</a></div>
+</header>
+
+<div id="logo">
+<a href="home.html"><img src=logo2.png></a>
+<br><br>
+</div>
+
+<div id="mainte">Page Under Maintenance!</div>
+
+
+
+</body>
+</html>
